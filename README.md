@@ -6,26 +6,91 @@ EliteResume is an AI-powered resume builder with role-specific content suggestio
 
 ```text
 EliteResume/
+├── README.md
 ├── backend/
 │   ├── pom.xml
+│   ├── .env
 │   ├── .env.example
+│   ├── backend-run.log
+│   ├── backend-run-8081.log
 │   ├── storage/
 │   │   └── resumes/
-│   └── src/
-│       ├── main/
-│       │   ├── java/com/eliteresume/api/
-│       │   │   ├── config/
-│       │   │   ├── controller/
-│       │   │   ├── dto/
-│       │   │   ├── entity/
-│       │   │   ├── exception/
-│       │   │   ├── repository/
-│       │   │   ├── security/
-│       │   │   ├── service/
-│       │   │   └── EliteResumeApiApplication.java
-│       │   └── resources/application.yml
-│       └── test/java/com/eliteresume/api/
+│   ├── src/
+│   │   └── main/
+│   │       ├── java/com/eliteresume/api/
+│   │       │   ├── config/
+│   │       │   │   ├── AppProperties.java
+│   │       │   │   ├── BeanConfig.java
+│   │       │   │   ├── SchemaMaintenanceConfig.java
+│   │       │   │   └── SecurityConfig.java
+│   │       │   ├── controller/
+│   │       │   │   ├── AuthController.java
+│   │       │   │   └── ResumeController.java
+│   │       │   ├── dto/
+│   │       │   │   ├── AuthDtos.java
+│   │       │   │   ├── GeminiDtos.java
+│   │       │   │   └── ResumeDtos.java
+│   │       │   ├── entity/
+│   │       │   │   ├── AuthProvider.java
+│   │       │   │   ├── Certificate.java
+│   │       │   │   ├── Education.java
+│   │       │   │   ├── Experience.java
+│   │       │   │   ├── Language.java
+│   │       │   │   ├── Project.java
+│   │       │   │   ├── Resume.java
+│   │       │   │   ├── ScoreType.java
+│   │       │   │   ├── Skill.java
+│   │       │   │   └── User.java
+│   │       │   ├── exception/
+│   │       │   │   ├── ApiException.java
+│   │       │   │   └── GlobalExceptionHandler.java
+│   │       │   ├── repository/
+│   │       │   │   ├── CertificateRepository.java
+│   │       │   │   ├── EducationRepository.java
+│   │       │   │   ├── ExperienceRepository.java
+│   │       │   │   ├── LanguageRepository.java
+│   │       │   │   ├── ProjectRepository.java
+│   │       │   │   ├── ResumeRepository.java
+│   │       │   │   ├── SkillRepository.java
+│   │       │   │   └── UserRepository.java
+│   │       │   ├── security/
+│   │       │   │   ├── JwtAuthenticationFilter.java
+│   │       │   │   ├── JwtService.java
+│   │       │   │   └── UserPrincipalService.java
+│   │       │   ├── service/
+│   │       │   │   ├── AuthService.java
+│   │       │   │   ├── CurrentUserService.java
+│   │       │   │   ├── GeminiService.java
+│   │       │   │   ├── GoogleOAuthService.java
+│   │       │   │   ├── ResumeMapper.java
+│   │       │   │   ├── ResumePdfService.java
+│   │       │   │   └── ResumeService.java
+│   │       │   └── EliteResumeApiApplication.java
+│   │       └── resources/
+│   │           └── application.yml
+│   └── target/
 ├── frontend/
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── .env.example
+│   ├── index.html
+│   ├── vite.config.js
+│   ├── postcss.config.js
+│   ├── tailwind.config.js
+│   ├── src/
+│   │   ├── main.jsx
+│   │   ├── App.jsx
+│   │   ├── styles.css
+│   │   ├── api/
+│   │   │   ├── authApi.js
+│   │   │   ├── client.js
+│   │   │   └── resumeApi.js
+│   │   ├── components/
+│   │   ├── context/
+│   │   ├── data/
+│   │   └── pages/
+│   ├── dist/
+│   └── node_modules/
 └── docs/
     └── api-endpoints.md
 ```
